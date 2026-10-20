@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة ثالث ثانوي - ملتقى النخبة</title>
+    <style>
+        :root {
+            --bg-color: #0F172A;
+            --card-surface: #1E293B;
+            --primary-accent: #6366F1;
+            --alert-orange: #F97316;
+            --text-light: #F8FAFC;
+            --border-color: #334155;
+            --text-muted: #94A3B8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            line-height: 1.6;
+            padding-bottom: 40px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--card-surface);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text-light);
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-accent);
+        }
+
+        /* Alert Banner */
+        .alert-banner {
+            background-color: var(--alert-orange);
+            color: var(--text-light);
+            text-align: center;
+            padding: 10px;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 8px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--card-surface);
+            padding: 40px;
+            border-radius: 12px;
+            margin-top: 20px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .countdown {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-top: 15px;
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .card {
+            background-color: var(--card-surface);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card h2 {
+            margin-bottom: 15px;
+            color: var(--primary-accent);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        /* Schedule & Projects List */
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .time {
+            color: var(--primary-accent);
+            font-weight: bold;
+            display: inline-block;
+            width: 80px;
+        }
+
+        /* Feedback Form */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        textarea {
+            background-color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            padding: 15px;
+            border-radius: 8px;
+            resize: vertical;
+            min-height: 100px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: var(--primary-accent);
+            color: var(--text-light);
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #4F46E5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="container navbar-content">
+            <div class="logo">وجهتك 🎓</div>
+            <div class="nav-links">
+                <a href="#schedule">الجدول</a>
+                <a href="#projects">المشاريع</a>
+                <a href="#feedback">صوت الفصل</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        
+        <div class="alert-banner">
+            🚨 تنبيه عاجل: اختبار مادة الإنجليزي بعد يومين!
+        </div>
+
+        <div class="hero">
+            <h1>أهلاً بك يا بطل في منصتك الخاصة</h1>
+            <p>سنة ثالثة ثانوي هي محطة الانطلاق نحو المستقبل.</p>
+            <div class="countdown">
+                ⏳ تبقى على التخرج والأحلام الكبيرة: 234 يوم!
+            </div>
+        </div>
+
+        <div class="grid">
+            
+            <div class="card" id="schedule">
+                <h2>📅 جدول الحصص والتحصيلي</h2>
+                <ul>
+                    <li><span class="time">08:00</span> رياضيات - مراجعة المتجهات</li>
+                    <li><span class="time">09:00</span> فيزياء - قوانين نيوتن</li>
+                    <li><span class="time">10:00</span> كيمياء - التفاعلات الكيميائية</li>
+                    <li><span class="time">11:00</span> تدريب قدرات - أفكار التناظر اللفظي</li>
+                </ul>
+            </div>
+
+            <div class="card" id="projects">
+                <h2>📂 مساحة مشاريع الفصل</h2>
+                <ul>
+                    <li><strong>مشروع الفيزياء:</strong> (أحمد، رمزي، خالد) - التسليم الخميس</li>
+                    <li><strong>بحث الأحياء:</strong> (سعد، محمد) - التسليم الأحد القادم</li>
+                    <li><strong>نشاط الكيمياء:</strong> (جميع المجموعات) - جاري العمل عليها</li>
+                </ul>
+            </div>
+
+            <div class="card" id="feedback">
+                <h2>💡 صندوق الآراء والمقترحات</h2>
+                <form onsubmit="alert('تم إرسال رأيك بنجاح!'); return false;">
+                    <textarea placeholder="اكتب رأيك، تنبيهك، أو أي شيء ودك الفريق يعرفه بدون إحراج..."></textarea>
+                    <button type="submit">إرسال</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
